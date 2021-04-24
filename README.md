@@ -1,4 +1,4 @@
-# l2c
+# Minesweeper
 
 ## Project setup
 ```
