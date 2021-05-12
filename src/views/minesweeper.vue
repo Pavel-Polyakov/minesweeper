@@ -2,6 +2,10 @@
   <div>
     <Status v-if="game" :game="game" />
     <Board v-if="game" :table="this.game.table.table" :game="this.game" />
+    
+    <p>Your goal is clear the board containing hidden bombs</p>
+    <p>Use alt + click to set flags</p>
+    
   </div>
 </template>
 

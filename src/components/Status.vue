@@ -2,20 +2,20 @@
   <div>
     <tr>
       <td>
-        <button @click="$router.push('/')">⬅️</button>
+        <button @click="$router.push('/')">⬅️ home</button>
       </td>
       <td>
-        <button @click="game.init()">🔁</button>
+        <button @click="game.init()">🔁 restart</button>
       </td>
     </tr>
-  <tr>
+    <tr>
       <td>
         <h1>{{ count }}</h1>
       </td>
-
       <td>
         <h1>{{ status }}</h1>
-      </td></tr>
+      </td>
+    </tr>
     <tr>
       <td></td>
     </tr>
@@ -46,3 +46,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+div {
+  display: table;
+  margin: 0 auto;
+}
+</style>

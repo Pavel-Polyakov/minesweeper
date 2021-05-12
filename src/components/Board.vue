@@ -29,3 +29,11 @@ export default {
   },
 };
 </script>
+<style scoped>
+div {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0.1vw;
+  margin: 0 auto;
+}
+</style>
