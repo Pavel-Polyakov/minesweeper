@@ -129,9 +129,7 @@ class Table {
         let cellsForFill = [];
         
         while (cellsForFill.length < this.bombsCount) {
-            // get random value from available cells
-            let r = Math.random() * 100 | 0
-            let i = r % cellsForChoose.length;
+            let i = Math.floor(Math.random() * cellsForChoose.length);
             let choosen = cellsForChoose[i];
             cellsForFill.push(choosen);
             cellsForChoose = cellsForChoose.filter((c) => c != choosen);
