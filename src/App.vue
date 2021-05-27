@@ -1,13 +1,14 @@
 <template>
-<v-app>
-  <div id="app">
-    <Status v-if="game" :game="game"/>
-    <Board v-if="game" :table="this.game.table.table" :game="this.game" />
+  <v-app>
+    <div>
+      <Status v-if="game" :game="game" />
+      <!-- <Status v-if="game" :game="game" /> -->
 
-    <p>Your goal is clear the board containing hidden bombs</p>
-    <p>Use alt + click to set flags</p>
-  </div>
-</v-app>
+      <Board v-if="game" :table="this.game.table.table" :game="this.game" />
+      <!-- <p>Your goal is clear the board containing hidden bombs</p> -->
+      <!-- <p>Use alt + click to set flags</p> -->
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -52,12 +53,13 @@ export default {
 };
 </script>
 <style>
-#app {
+html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: scroll;
   /* margin-top: 60px; */
 }
 /* 

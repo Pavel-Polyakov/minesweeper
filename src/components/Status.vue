@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dense color="white">
+  <v-app-bar absolute dense flat dark>
     <v-btn small @click="game.init()" color="red" dark
       >Restart <v-icon dark right> mdi-restart </v-icon></v-btn
     >
