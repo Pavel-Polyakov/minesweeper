@@ -37,6 +37,7 @@ export default {
 
       if (this.isOpen) {
         classes.push("open");
+        classes.push("disabled");
 
         if (this.hasBomb) {
           classes.push("bomb");
@@ -85,30 +86,45 @@ export default {
   height: 50px;
   margin: 1px;
   font-size: 28pt;
-  border: 1px ridge rgba(25, 25, 25, 0.25);
+  border: 2px ridge rgba(25, 25, 25, 0.1);
   border-radius: 5px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  color: #616161;
 }
 
 .closed {
   background-color: rgba(50, 50, 50, 0.1);
 }
+.closed:hover {
+  background: rgba(50, 50, 50, 0.15);
+}
+.closed:active {
+  background: rgba(50, 50, 50, 0.2);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
 .open {
   background-color: white;
 }
-
 .near_0 {
   color: lightgrey;
 }
 .near_1 {
-  color: blue;
+  color: #42a5f5;
 }
 .near_2 {
-  color: green;
+  color: #66bb6a;
 }
 .near_3_or_more {
-  color: red;
+  color: #f44336;
 }
 .bomb {
-  background-color: red;
+  color: white;
+  background-color: #f44336;
 }
 </style>
