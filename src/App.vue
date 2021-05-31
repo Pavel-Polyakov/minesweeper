@@ -18,20 +18,7 @@ import Status from "@/components/Status";
 
 export default {
   name: "App",
-  props: {
-    rows: {
-      type: Number,
-      default: 10,
-    },
-    columns: {
-      type: Number,
-      default: 15,
-    },
-    bombsCount: {
-      type: Number,
-      default: 10,
-    },
-  },
+  props: {},
   data() {
     return {
       game: null,
@@ -42,7 +29,7 @@ export default {
   },
   methods: {
     init() {
-      this.game = new Game(this.rows, this.columns, this.bombsCount);
+      this.game = new Game();
     },
   },
   components: {
@@ -61,6 +48,14 @@ html {
   color: #2c3e50;
   overflow-x: scroll;
   /* margin-top: 60px; */
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 /* 
 button {

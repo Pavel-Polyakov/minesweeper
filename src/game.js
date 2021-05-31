@@ -234,11 +234,29 @@ class Table {
 }
 
 class Game {
-    constructor(rows, columns, bombsCount) {
-        this.rows = rows
-        this.columns = columns
-        this.bombsCount = bombsCount
+    constructor() {
+        let defaultValues = this.defaultValues()
+        this.rows = defaultValues["rows"];
+        this.columns = defaultValues["columns"];
+        this.bombsCount = defaultValues["bombsCount"];
         this.init()
+    }
+
+    defaultValues() {
+        if(window.innerHeight > window.innerWidth){
+            // vertical
+            return {
+                rows: 12,
+                columns: 7,
+                bombsCount: 6
+            }
+        }
+        // horizontal
+        return {
+            rows: 10,
+            columns: 15,
+            bombsCount: 10
+        }
     }
 
     init() {

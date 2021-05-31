@@ -25,13 +25,12 @@
           </v-toolbar-items>
         </v-toolbar>
         <v-list>
-                    <v-list-item>
+          <v-list-item>
             <v-list-item-content>
               <v-btn @click="defaultValues">Default values</v-btn>
             </v-list-item-content>
           </v-list-item>
-          
-          
+
           <v-list-item>
             <v-list-item-content>
               <!-- <v-list-item-title>Rows</v-list-item-title> -->
@@ -101,7 +100,6 @@
               <v-btn color="primary" @click="init()"> Save & restart </v-btn>
             </v-list-item-content>
           </v-list-item>
-
         </v-list>
       </v-card>
     </v-dialog>
@@ -124,11 +122,14 @@ export default {
       this.dialog = false;
       this.game.init();
     },
+
     defaultValues() {
-      this.game.rows = 10;
-      this.game.columns = 15;
-      this.game.bombsCount = 10;
+      let defaultValues = this.game.defaultValues();
+      this.game.rows = defaultValues["rows"];
+      this.game.columns = defaultValues["columns"];
+      this.game.bombsCount = defaultValues["bombsCount"];
     },
+    
   },
   computed: {
     count() {

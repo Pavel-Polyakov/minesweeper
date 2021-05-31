@@ -1,6 +1,7 @@
 <template>
   <button
     :class="cellClass"
+    v-my-touch:touchhold="clickFlag"
     v-on:click.alt.exact="clickFlag"
     v-on:click.right="clickFlag"
     v-on:click.exact="click"
