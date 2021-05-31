@@ -185,6 +185,10 @@ class Table {
     }
 
     flag(row, column) {
+        if (this.game.isFinished) {
+            return
+        }
+
         let cell = this.getCell(row, column)
 
         if (cell.isOpen) {
@@ -246,7 +250,7 @@ class Game {
         if(window.innerHeight > window.innerWidth){
             // vertical
             return {
-                rows: 12,
+                rows: 10,
                 columns: 7,
                 bombsCount: 6
             }

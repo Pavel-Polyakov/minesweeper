@@ -57,9 +57,4 @@ html {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-/* 
-button {
-  font-size: 14pt;
-  width: 100%;
-} */
 </style>

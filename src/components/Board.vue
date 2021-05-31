@@ -22,11 +22,6 @@ export default {
   components: {
     Cell,
   },
-  methods: {
-    click(v) {
-      console.log(v);
-    },
-  },
 };
 </script>
 <style scoped>
@@ -35,8 +30,6 @@ div {
   border-collapse: separate;
   border-spacing: 0.1vw;
   margin: 0 auto;
-
   margin-top: 60px;
 }
-
 </style>
